@@ -25,7 +25,7 @@ function Helpers() {
                     if (left < right) {
                         return -1;
                     }
-                    if (left == right) {
+                    if (left === right) {
                         return 0;
                     } else {
                         return 1;

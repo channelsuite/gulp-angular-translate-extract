@@ -34,7 +34,7 @@ function ExtractTranslations (options, content) {
         HtmlFilterDoubleQuote: Helpers.escapeRegExp(this.interpolation.startDelimiter) + '\\s*"((?:\\\\.|[^"\\\\\])*)"\\s*\\|\\s*translate(:.*?)?\\s*' + Helpers.escapeRegExp(this.interpolation.endDelimiter),
         HtmlFilterSimpleQuoteOneTimeBinding: Helpers.escapeRegExp(this.interpolation.startDelimiter) + '::\\(\\s*\'((?:\\\\.|[^\'\\\\])*)\'\\s*\\|\\s*translate(:.*?)?\\s*\\)' + Helpers.escapeRegExp(this.interpolation.endDelimiter),
         HtmlFilterDoubleQuoteOneTimeBinding: Helpers.escapeRegExp(this.interpolation.startDelimiter) + '::\\(\\s*"((?:\\\\.|[^"\\\\])*)"\\s*\\|\\s*translate(:.*?)?\\s*\\)' + Helpers.escapeRegExp(this.interpolation.endDelimiter),
-        HtmlDirective: '<[^>]*translate[^{>]*>([^' + this.interpolationEscapeChar + '<]*)<\/[^>]*>',
+        HtmlDirective: '<[^>]*translate[^>]*>([^' + this.interpolationEscapeChar + '<]*)<\/[^>]*>',
         HtmlDirectiveStandalone: 'translate="((?:\\\\.|[^' + this.interpolationEscapeChar + '"\\\\])*)"',
         HtmlDirectiveAttrStandalone: 'translate-attr-[^=\\s]*="((?:\\\\.|[^"\\\\])*)"',
         HtmlDirectivePluralLast: 'translate="((?:\\\\.|[^' + this.interpolationEscapeChar + '"\\\\])*)".*angular-plural-extract="((?:\\\\.|[^"\\\\])*)"',
